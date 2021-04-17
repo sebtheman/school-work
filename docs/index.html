@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            var text_for_messing_around_with_js_dom = 0;
+        </script>
         <link rel="shortcut icon" type="image/jpg" href="https://github.com/sebtheman/memes-website/raw/master/docs/images/pepe.jpeg"/>
         <meta name="description" content="This is a description meta tag">
         <meta name="keywords" content="description, author, keywords, links, headings, styles, css, html">
@@ -167,6 +170,7 @@
                 border-color: yellow;
                 border-width: auto;
                 background-color: black;
+                color: black;
             }
             .henly {
                 background-color: #cc9c00;
@@ -231,6 +235,9 @@
                 color: red;
                 background-color: black;
                 font-size: 15pt;
+            }
+            .messing_around_with_js_dom {
+                background-color: #298753;
             }
         </style>
     </head>
@@ -963,5 +970,26 @@
             <center>You're welcome !</center>
             <center><a href="#htmlpractice">HOME</a></center>
             </div>
+            <div class="headings">
+                <center><h1>Messing around with document.getElementById</h1></center>
+            </div>
+            
+            <div class="messing_around_with_js_dom">
+                <h1><p id="messing_around_with_js_dom_text_change_text">By pressing the button, this text will change</p></h1>
+                <button onclick="changeTextForMessingAroundWithJSDom()">Press me to change the text!</button>
+                <h3>THIS IS NOT WORKING YET. I AM WORKING ON IT THOUGH</h3>
+            </div>
+            <script>
+                function changeTextForMessingAroundWithJSDom() {
+                    if (window.text_for_messing_around_with_js_dom = 0) {
+                        var text_for_messing_around_with_js_dom = 1;
+                        document.getElementById("messing_around_with_js_dom_text_change_text").textContent = "The text has been changed! Press the button again it back!";
+                    }
+                    else {
+                        var text_for_messing_around_with_js_dom = 0;
+                        document.getElementById("messing_around_with_js_dom_text_change_text").textContent = "By pressing the button, this text will change";
+                    }
+                }
+            </script>
     </body>
 </html>
